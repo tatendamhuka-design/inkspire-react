@@ -1,0 +1,14 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://inkspiredigitaldesigns.co.za/sitemap.xml
+
+# Prevent crawling of admin pages
+Disallow: /admin/
+Disallow: /admin/dashboard
+Disallow: /login
+
+# Crawl delay (be respectful)
+Crawl-delay: 1
