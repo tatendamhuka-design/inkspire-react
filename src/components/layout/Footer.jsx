@@ -60,7 +60,7 @@ const Footer = () => {
                 </div>
 
                 <div className="copyright">
-                    <p>&copy; 2025 Inkspire Digital Designs. All rights reserved. | Web Design South Africa | Serving Nationwide</p>
+                    <p>&copy; 2026 Inkspire Digital Designs. All rights reserved. | Web Design South Africa | Serving Nationwide</p>
                 </div>
             </div>
         </footer>
