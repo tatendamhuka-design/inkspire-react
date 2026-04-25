@@ -12,7 +12,7 @@ const SocialLinks = ({ variant = 'default', showLabels = false }) => {
             icon: 'fab fa-instagram',
             url: 'https://www.instagram.com/inkspire0000/',
             color: '#e4405f',
-            username: '@inkspire0000'
+            username: '@inkspire Digital Designs'
         },
         {
             name: 'LinkedIn',
