@@ -2,7 +2,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 // Your Google Apps Script URL
-const API_URL = 'https://script.google.com/macros/s/AKfycbwMkxLE4uWYM1nd08h0dNeO2ZGw1dWu7VJpxH8jNWdD/dev';
+const API_URL = 'https://script.google.com/macros/s/AKfycbyh8zQOeCqRZ6jkRq5VZrf6nEmfhdC-6OV_O_vYMVX2pS_uOLwRbnWAw6qaASrMc5VCPw/exec';
 
 // Helper function for API calls
 const apiCall = async (params) => {
