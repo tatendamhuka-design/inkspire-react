@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import LocationLinks from '../common/LocationLinks';
 
 const Footer = () => {
     return (
@@ -9,19 +10,19 @@ const Footer = () => {
                         <h4>Inkspire Digital Designs</h4>
                         <p>Professional web design and graphic design by a freelance designer in Amanzimtoti, Durban, serving clients across South Africa nationwide.</p>
                         <div className="social-links">
-                            <a href="https://facebook.com/inkspiredigital" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <a href="https://facebook.com/inkspiredigitaldesigns" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                                 <i className="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://instagram.com/inkspiredigital" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <a href="https://instagram.com/inkspire0000" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <i className="fab fa-instagram"></i>
                             </a>
                             <a href="https://linkedin.com/company/inkspire-digital-designs" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <i className="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://twitter.com/inkspiredigital" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <a href="https://twitter.com/inkspiredigitaldesigns" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                                 <i className="fab fa-twitter"></i>
                             </a>
-                            <a href="https://tiktok.com/@inkspiredigital" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <a href="https://tiktok.com/@inkspiredigitaldesigns" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                                 <i className="fab fa-tiktok"></i>
                             </a>
                         </div>
@@ -57,6 +58,11 @@ const Footer = () => {
                             <li><i className="fas fa-map-marker-alt"></i> Amanzimtoti, Durban</li>
                         </ul>
                     </div>
+                </div>
+
+                {/* Location Links - Internal linking for SEO */}
+                <div className="footer-location-links">
+                    <LocationLinks />
                 </div>
 
                 <div className="copyright">

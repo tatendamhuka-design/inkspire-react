@@ -2566,6 +2566,34 @@ section {
     font-size: 0.9rem;
     color: rgba(255,255,255,0.7);
 }
+
+/* Location Links - Internal Linking for SEO */
+.location-links {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+}
+
+.location-links strong {
+    color: var(--text-primary);
+    margin-right: 10px;
+}
+
+.location-links a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.location-links a:hover {
+    color: var(--primary);
+}
+
+.footer-location-links {
+    margin: 20px 0 10px;
+}
 /* Schema markup for rich snippets - Add to index.html */
 /* Utility Classes */
 .text-center { text-align: center; }

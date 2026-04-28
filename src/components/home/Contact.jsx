@@ -23,7 +23,6 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
         
-        // Create the WhatsApp message
         let message = `*NEW WEBSITE INQUIRY*%0A%0A`;
         message += `*Name:* ${formData.name}%0A`;
         message += `*Email:* ${formData.email}%0A`;
@@ -31,20 +30,16 @@ const Contact = () => {
         message += `*Service:* ${getServiceLabel(formData.service)}%0A`;
         message += `*Message:* ${formData.message}%0A%0A`;
         
-        // Check for referral cookie
         const referrer = getReferralCookie();
         if (referrer) {
             message += `*Referred by:* ${referrer}%0A`;
         }
         
-        // Open WhatsApp with the pre-filled message
         const whatsappUrl = `https://wa.me/27761050485?text=${message}`;
         window.open(whatsappUrl, '_blank');
         
-        // Show success message
         toast.success('Redirecting to WhatsApp...');
         
-        // Reset form
         setFormData({
             name: '',
             email: '',
@@ -90,8 +85,7 @@ const Contact = () => {
         } else if (type === 'demo') {
             message = "Hi Inkspire Digital Designs! I'd like to request a demo website. My business is about: ";
         }
-        const whatsappUrl = `https://wa.me/27761050485?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
+        window.open(`https://wa.me/27761050485?text=${encodeURIComponent(message)}`, '_blank');
     };
 
     return (
@@ -103,7 +97,6 @@ const Contact = () => {
                 </div>
 
                 <div className="contact-grid">
-                    {/* Left Column - Contact Info */}
                     <div className="contact-info">
                         <h3>Get a Free Quote</h3>
                         <p>Whether you need a full website, a demo to see my work, or just have questions - I'm here to help. Let's create something amazing together!</p>
@@ -146,13 +139,11 @@ const Contact = () => {
                             </button>
                         </div>
                         
-                        {/* Google Review Button */}
                         <div style={{ marginTop: '30px', textAlign: 'center' }}>
                             <GoogleReviewButton />
                         </div>
                     </div>
 
-                    {/* Right Column - Contact Form (Sends to WhatsApp) */}
                     <div className="contact-form">
                         <h3>Send a Message</h3>
                         <form onSubmit={handleSubmit}>
@@ -160,7 +151,7 @@ const Contact = () => {
                                 <input 
                                     type="text" 
                                     name="name"
-                                    placeholder="Your Full Name" 
+                                    placeholder="Your Name" 
                                     value={formData.name}
                                     onChange={handleChange}
                                     required 
@@ -170,7 +161,7 @@ const Contact = () => {
                                 <input 
                                     type="email" 
                                     name="email"
-                                    placeholder="Email Address" 
+                                    placeholder="Email" 
                                     value={formData.email}
                                     onChange={handleChange}
                                     required 
@@ -202,10 +193,11 @@ const Contact = () => {
                             <div className="form-group">
                                 <textarea 
                                     name="message"
-                                    placeholder="Tell me about your project... What do you need?" 
+                                    placeholder="Tell me about your project..." 
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
+                                    rows="3"
                                 ></textarea>
                             </div>
                             <button 
