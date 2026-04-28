@@ -29,6 +29,7 @@ function App() {
             <Toaster position="top-right" />
             <Analytics />  {/* ← ADD THIS LINE */}
             <Routes>
+                <Route path="/:type?/:service?/:location?/:modifier?/:industry?/:question?/:year?/:price?/:landmark?/:urgency?" element={<SEOPage />} />
                 <Route path="/:type?/:service?/:location?/:modifier?/:industry?/:question?" element={<SEOPage />} />
                 <Route path="/" element={<HomePage />} />
                 <Route path="/:service/:location" element={<DynamicServicePage />} />

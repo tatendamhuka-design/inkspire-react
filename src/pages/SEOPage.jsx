@@ -5,9 +5,9 @@ import Footer from '../components/layout/Footer';
 import FloatingWhatsApp from '../components/common/FloatingWhatsApp';
 
 const SEOPage = () => {
-    const { type, service, location, modifier, industry, question } = useParams();
+    const { type, service, location, modifier, industry, question, year, price, landmark, urgency } = useParams();
 
-    // ===== ALL SERVICES =====
+    // ===== ALL SERVICES (15) =====
     const services = {
         'web-designer': { name: 'Web Designer', keyword: 'web designer' },
         'affordable-web-designer': { name: 'Affordable Web Designer', keyword: 'affordable web designer' },
@@ -32,7 +32,10 @@ const SEOPage = () => {
         'affordable': { title: 'Affordable', keyword: 'affordable', description: 'cost-effective' },
         'professional': { title: 'Professional', keyword: 'professional', description: 'expert' },
         'reliable': { title: 'Reliable', keyword: 'reliable', description: 'trusted' },
-        'experienced': { title: 'Experienced', keyword: 'experienced', description: 'skilled' }
+        'experienced': { title: 'Experienced', keyword: 'experienced', description: 'skilled' },
+        'fast': { title: 'Fast', keyword: 'fast', description: 'quick turnaround' },
+        'easy': { title: 'Easy', keyword: 'easy', description: 'hassle-free' },
+        'quick': { title: 'Quick', keyword: 'quick', description: 'speedy delivery' }
     };
 
     // ===== INDUSTRIES =====
@@ -49,211 +52,491 @@ const SEOPage = () => {
         'takeaways': { name: 'Takeaways', keyword: 'takeaway', service: 'Food Delivery Website' }
     };
 
-    // ===== ALL LOCATIONS (93) =====
-    const locations = {
-        // KZN
-        'amanzimtoti': { name: 'Amanzimtoti', province: 'KwaZulu-Natal' },
-        'durban': { name: 'Durban', province: 'KwaZulu-Natal' },
-        'durban-north': { name: 'Durban North', province: 'KwaZulu-Natal' },
-        'umhlanga': { name: 'Umhlanga', province: 'KwaZulu-Natal' },
-        'ballito': { name: 'Ballito', province: 'KwaZulu-Natal' },
-        'westville': { name: 'Westville', province: 'KwaZulu-Natal' },
-        'kloof': { name: 'Kloof', province: 'KwaZulu-Natal' },
-        'hillcrest': { name: 'Hillcrest', province: 'KwaZulu-Natal' },
-        'pinetown': { name: 'Pinetown', province: 'KwaZulu-Natal' },
-        'queensburgh': { name: 'Queensburgh', province: 'KwaZulu-Natal' },
-        'bluff': { name: 'Bluff', province: 'KwaZulu-Natal' },
-        'glenwood': { name: 'Glenwood', province: 'KwaZulu-Natal' },
-        'morningside': { name: 'Morningside', province: 'KwaZulu-Natal' },
-        'berea': { name: 'Berea', province: 'KwaZulu-Natal' },
-        'musgrave': { name: 'Musgrave', province: 'KwaZulu-Natal' },
-        'gateway': { name: 'Gateway', province: 'KwaZulu-Natal' },
-        'la-lucia': { name: 'La Lucia', province: 'KwaZulu-Natal' },
-        'sibaya': { name: 'Sibaya', province: 'KwaZulu-Natal' },
-        'mount-edgecombe': { name: 'Mount Edgecombe', province: 'KwaZulu-Natal' },
-        'phoenix': { name: 'Phoenix', province: 'KwaZulu-Natal' },
-        'chatsworth': { name: 'Chatsworth', province: 'KwaZulu-Natal' },
-        'isipingo': { name: 'Isipingo', province: 'KwaZulu-Natal' },
-        'umlazi': { name: 'Umlazi', province: 'KwaZulu-Natal' },
-        'kwamashu': { name: 'KwaMashu', province: 'KwaZulu-Natal' },
-        // Gauteng
-        'johannesburg': { name: 'Johannesburg', province: 'Gauteng' },
-        'sandton': { name: 'Sandton', province: 'Gauteng' },
-        'midrand': { name: 'Midrand', province: 'Gauteng' },
-        'randburg': { name: 'Randburg', province: 'Gauteng' },
-        'fourways': { name: 'Fourways', province: 'Gauteng' },
-        'bryanston': { name: 'Bryanston', province: 'Gauteng' },
-        'rivonia': { name: 'Rivonia', province: 'Gauteng' },
-        'sunninghill': { name: 'Sunninghill', province: 'Gauteng' },
-        'woodmead': { name: 'Woodmead', province: 'Gauteng' },
-        'rosebank': { name: 'Rosebank', province: 'Gauteng' },
-        'melrose-arch': { name: 'Melrose Arch', province: 'Gauteng' },
-        'houghton': { name: 'Houghton', province: 'Gauteng' },
-        'parktown': { name: 'Parktown', province: 'Gauteng' },
-        'braamfontein': { name: 'Braamfontein', province: 'Gauteng' },
-        'soweto': { name: 'Soweto', province: 'Gauteng' },
-        'benoni': { name: 'Benoni', province: 'Gauteng' },
-        'boksburg': { name: 'Boksburg', province: 'Gauteng' },
-        'germiston': { name: 'Germiston', province: 'Gauteng' },
-        'kempton-park': { name: 'Kempton Park', province: 'Gauteng' },
-        'edenvale': { name: 'Edenvale', province: 'Gauteng' },
-        'bedfordview': { name: 'Bedfordview', province: 'Gauteng' },
-        'alberton': { name: 'Alberton', province: 'Gauteng' },
-        'roodepoort': { name: 'Roodepoort', province: 'Gauteng' },
-        'randfontein': { name: 'Randfontein', province: 'Gauteng' },
-        'krugersdorp': { name: 'Krugersdorp', province: 'Gauteng' },
-        'lenasia': { name: 'Lenasia', province: 'Gauteng' },
-        'pretoria': { name: 'Pretoria', province: 'Gauteng' },
-        'centurion': { name: 'Centurion', province: 'Gauteng' },
-        'hatfield': { name: 'Hatfield', province: 'Gauteng' },
-        'brooklyn': { name: 'Brooklyn', province: 'Gauteng' },
-        'menlyn': { name: 'Menlyn', province: 'Gauteng' },
-        'waterkloof': { name: 'Waterkloof', province: 'Gauteng' },
-        'lynnwood': { name: 'Lynnwood', province: 'Gauteng' },
-        'faerie-glen': { name: 'Faerie Glen', province: 'Gauteng' },
-        'garsfontein': { name: 'Garsfontein', province: 'Gauteng' },
-        'moreleta-park': { name: 'Moreleta Park', province: 'Gauteng' },
-        'silver-lakes': { name: 'Silver Lakes', province: 'Gauteng' },
-        'pretoria-east': { name: 'Pretoria East', province: 'Gauteng' },
-        'pretoria-north': { name: 'Pretoria North', province: 'Gauteng' },
-        'wonderboom': { name: 'Wonderboom', province: 'Gauteng' },
-        'soshanguve': { name: 'Soshanguve', province: 'Gauteng' },
-        'mamelodi': { name: 'Mamelodi', province: 'Gauteng' },
-        'atteridgeville': { name: 'Atteridgeville', province: 'Gauteng' },
-        // Western Cape
-        'cape-town': { name: 'Cape Town', province: 'Western Cape' },
-        'sea-point': { name: 'Sea Point', province: 'Western Cape' },
-        'camps-bay': { name: 'Camps Bay', province: 'Western Cape' },
-        'clifton': { name: 'Clifton', province: 'Western Cape' },
-        'rondebosch': { name: 'Rondebosch', province: 'Western Cape' },
-        'claremont': { name: 'Claremont', province: 'Western Cape' },
-        'newlands': { name: 'Newlands', province: 'Western Cape' },
-        'kenilworth': { name: 'Kenilworth', province: 'Western Cape' },
-        'wynberg': { name: 'Wynberg', province: 'Western Cape' },
-        'constantia': { name: 'Constantia', province: 'Western Cape' },
-        'table-view': { name: 'Table View', province: 'Western Cape' },
-        'blouberg': { name: 'Blouberg', province: 'Western Cape' },
-        'parklands': { name: 'Parklands', province: 'Western Cape' },
-        'milnerton': { name: 'Milnerton', province: 'Western Cape' },
-        'century-city': { name: 'Century City', province: 'Western Cape' },
-        'durbanville': { name: 'Durbanville', province: 'Western Cape' },
-        'bellville': { name: 'Bellville', province: 'Western Cape' },
-        'muizenberg': { name: 'Muizenberg', province: 'Western Cape' },
-        'fish-hoek': { name: 'Fish Hoek', province: 'Western Cape' },
-        'simons-town': { name: "Simon's Town", province: 'Western Cape' },
-        'noordhoek': { name: 'Noordhoek', province: 'Western Cape' },
-        'hout-bay': { name: 'Hout Bay', province: 'Western Cape' }
+    // ===== VS COMPARISONS =====
+    const vsComparisons = {
+        'web-design-vs-web-development': {
+            title: 'Web Design vs Web Development: What\'s the Difference?',
+            item1: 'Web Design', item2: 'Web Development',
+            content: 'Web design focuses on the look and feel of your website (colors, layout, fonts). Web development deals with the technical functionality (coding, databases, forms). Both are essential for a successful website.'
+        },
+        'wordpress-vs-shopify': {
+            title: 'WordPress vs Shopify: Which is Better for Your Business?',
+            item1: 'WordPress', item2: 'Shopify',
+            content: 'WordPress is more flexible and cost-effective for most businesses. Shopify is better for pure e-commerce. As a designer, I recommend WordPress for its versatility and lower long-term costs.'
+        },
+        'wix-vs-professional-design': {
+            title: 'Wix vs Professional Web Design: The Real Difference',
+            item1: 'Wix', item2: 'Professional Design',
+            content: 'Wix offers DIY templates but limits customization. Professional design gives you a unique, SEO-optimized website that stands out and performs better on Google.'
+        },
+        'static-vs-dynamic-website': {
+            title: 'Static vs Dynamic Website: Which Do You Need?',
+            item1: 'Static Website', item2: 'Dynamic Website',
+            content: 'Static sites are faster and cheaper. Dynamic sites allow user interaction and content updates. Most small businesses need a dynamic site for growth.'
+        },
+        'freelance-vs-agency': {
+            title: 'Freelance Web Designer vs Agency: Pros and Cons',
+            item1: 'Freelance', item2: 'Agency',
+            content: 'Freelancers offer personalized service and lower rates. Agencies charge more but offer teams. For most small businesses, a skilled freelancer is the better choice.'
+        }
     };
 
-    // ===== QUESTIONS (for voice search) =====
+    // ===== "FOR" PAGES =====
+    const forPages = {
+        'small-business': { audience: 'Small Business', description: 'tailored for entrepreneurs and small business owners' },
+        'startups': { audience: 'Startups', description: 'perfect for new companies launching their brand' },
+        'nonprofits': { audience: 'Nonprofits', description: 'special rates for charitable organizations' },
+        'entrepreneurs': { audience: 'Entrepreneurs', description: 'designed for ambitious business owners' },
+        'freelancers': { audience: 'Freelancers', description: 'portfolio websites that attract clients' }
+    };
+
+    // ===== "WITHOUT" PAGES =====
+    const withoutPages = {
+        'coding': { task: 'coding', solution: 'I handle all the technical work so you don\'t have to' },
+        'developer': { task: 'a developer', solution: 'I am the developer - you get direct access without agency overhead' },
+        'design-software': { task: 'design software', solution: 'I use professional tools, you just share your vision' },
+        'monthly-fees': { task: 'monthly fees', solution: 'Affordable R200/month includes hosting, maintenance, and support' },
+        'contract': { task: 'a long-term contract', solution: 'No lock-in contracts. Pay as you go.' }
+    };
+
+    // ===== YEARS =====
+    const years = {
+        '2025': { year: '2025', description: 'current pricing and trends' },
+        '2026': { year: '2026', description: 'upcoming trends and forecasts' }
+    };
+
+    // ===== PRICE RANGES =====
+    const priceRanges = {
+        'under-5000': { amount: 'R5,000', packages: 'Basic (R1,499) or Standard (R2,499)' },
+        'under-3000': { amount: 'R3,000', packages: 'Basic (R1,499) fits your budget' },
+        'under-2000': { amount: 'R2,000', packages: 'Basic package at R1,499' }
+    };
+
+    // ===== LANDMARKS (Local SEO) =====
+    const landmarks = {
+        'va-waterfront': { name: 'V&A Waterfront', city: 'Cape Town' },
+        'sandton-city': { name: 'Sandton City', city: 'Johannesburg' },
+        'gateway-mall': { name: 'Gateway Mall', city: 'Durban' },
+        'moses-mabhida': { name: 'Moses Mabhida Stadium', city: 'Durban' },
+        'table-mountain': { name: 'Table Mountain', city: 'Cape Town' }
+    };
+
+    // ===== URGENCY TYPES =====
+    const urgencyTypes = {
+        'emergency': { type: 'Emergency', turnaround: '24-48 hours', badge: 'Urgent' },
+        'urgent': { type: 'Urgent', turnaround: '48-72 hours', badge: 'Priority' },
+        'same-day': { type: 'Same Day', turnaround: '24 hours or less', badge: 'Express' },
+        'quick': { type: 'Quick', turnaround: '3-5 days', badge: 'Fast Track' }
+    };
+
+    // ===== QUESTIONS =====
     const questions = {
         'how-much-does-a-website-cost': {
             title: 'How Much Does a Website Cost in South Africa?',
-            answer: 'Websites start from R1,499 once-off plus R200/month for hosting. No hidden fees.',
-            longAnswer: 'The cost of a website in South Africa varies depending on complexity. My packages start at R1,499 for a basic 1-page website, R2,499 for a standard 5-page website, and R4,999 for a premium full website. All include hosting and maintenance.'
+            answer: 'Websites start from R1,499 once-off plus R200/month for hosting.',
+            longAnswer: 'My packages start at R1,499 for a basic website, R2,499 for standard, and R4,999 for premium. All include hosting and maintenance.'
         },
         'how-to-choose-a-web-designer': {
             title: 'How to Choose a Web Designer in South Africa',
             answer: 'Look for experience, portfolio, pricing transparency, and local knowledge.',
-            longAnswer: 'When choosing a web designer, check their portfolio, read client reviews, ask about pricing upfront, and ensure they understand your industry. As a local designer, I offer free demos so you can see my work before committing.'
+            longAnswer: 'Check portfolios, read reviews, ask about pricing upfront, and ensure they understand your industry. I offer free demos so you can see my work before committing.'
         },
-        'do-i-need-a-website-for-my-business': {
+        'do-i-need-a-website': {
             title: 'Do I Need a Website for My Small Business?',
-            answer: 'Yes! 81% of South Africans research online before making a purchase.',
-            longAnswer: 'A website makes your business visible 24/7, builds credibility, and helps customers find you. Even with social media, a website is your digital home that you control completely.'
+            answer: 'Yes! 81% of South Africans research online before purchasing.',
+            longAnswer: 'A website builds credibility, helps customers find you, and works 24/7. Even with social media, a website is essential.'
         },
-        'what-is-the-best-website-builder': {
+        'what-is-best-website-builder': {
             title: 'What Is the Best Website Builder for Small Business?',
-            answer: 'Professional custom design beats templates every time for uniqueness and SEO.',
-            longAnswer: 'While platforms like Wix and Squarespace offer templates, custom-designed websites perform better for SEO, look more professional, and can be tailored exactly to your needs.'
+            answer: 'Custom design beats templates for uniqueness and SEO.',
+            longAnswer: 'While Wix and Squarespace offer templates, custom-designed websites perform better for SEO and look more professional.'
         }
     };
 
-    // ===== PRICE PAGES =====
-    const pricePages = {
-        'website-packages-comparison': {
-            title: 'Website Packages Comparison South Africa',
-            description: 'Compare all web design packages side by side',
-            showComparison: true
-        },
-        'web-design-prices-south-africa': {
-            title: 'Web Design Prices South Africa - Complete Guide 2025',
-            description: 'Transparent pricing for professional websites',
-            showComparison: true
-        },
-        'cheapest-website-designer': {
-            title: 'Cheapest Website Designer in South Africa',
-            description: 'Quality affordable websites from R1,499',
-            showComparison: true
-        },
-        'website-cost-breakdown': {
-            title: 'Website Cost Breakdown - What You Actually Pay',
-            description: 'No hidden fees. See exactly what you pay for.',
-            showComparison: true
-        }
+    // ===== "REVIEW" PAGES =====
+    const reviewPages = {
+        'reviews': { type: 'Client Reviews', showRating: true },
+        'testimonials': { type: 'Client Testimonials', showRating: true },
+        'ratings': { type: 'Client Ratings', showRating: true }
+    };
+
+    // ===== ALL LOCATIONS (93) =====
+    const locations = {
+        'amanzimtoti': { name: 'Amanzimtoti', province: 'KwaZulu-Natal' },
+        'durban': { name: 'Durban', province: 'KwaZulu-Natal' },
+        'johannesburg': { name: 'Johannesburg', province: 'Gauteng' },
+        'cape-town': { name: 'Cape Town', province: 'Western Cape' },
+        'pretoria': { name: 'Pretoria', province: 'Gauteng' },
+        'sandton': { name: 'Sandton', province: 'Gauteng' },
+        'midrand': { name: 'Midrand', province: 'Gauteng' },
+        'umhlanga': { name: 'Umhlanga', province: 'KwaZulu-Natal' },
+        'ballito': { name: 'Ballito', province: 'KwaZulu-Natal' },
+        'centurion': { name: 'Centurion', province: 'Gauteng' }
     };
 
     // ===== DETECT PAGE TYPE =====
     
-    // Type 1: Service + Location (e.g., /web-designer/cape-town)
+    // Type 1: VS Comparison
+    if (vsComparisons[type]) {
+        return <VSComparisonPage data={vsComparisons[type]} />;
+    }
+    
+    // Type 2: "For" Pages
+    if (forPages[type]) {
+        return <ForPage data={forPages[type]} />;
+    }
+    
+    // Type 3: "Without" Pages
+    if (withoutPages[type]) {
+        return <WithoutPage data={withoutPages[type]} />;
+    }
+    
+    // Type 4: Year Pages
+    if (years[year]) {
+        return <YearPage data={years[year]} />;
+    }
+    
+    // Type 5: Price Range Pages
+    if (priceRanges[price]) {
+        return <PriceRangePage data={priceRanges[price]} />;
+    }
+    
+    // Type 6: Landmark Pages
+    if (landmarks[landmark]) {
+        return <LandmarkPage data={landmarks[landmark]} />;
+    }
+    
+    // Type 7: Urgency Pages
+    if (urgencyTypes[urgency]) {
+        return <UrgencyPage data={urgencyTypes[urgency]} />;
+    }
+    
+    // Type 8: Review/Testimonial Pages
+    if (reviewPages[type]) {
+        return <ReviewPage data={reviewPages[type]} />;
+    }
+    
+    // Type 9: Question Pages
+    if (questions[question]) {
+        return <QuestionPage data={questions[question]} />;
+    }
+    
+    // Type 10: Service + Location
     if (service && locations[location]) {
         const serviceData = services[service];
         const locationData = locations[location];
-        
         if (serviceData && locationData) {
-            return <ServiceLocationPage serviceData={serviceData} locationData={locationData} openWhatsApp={openWhatsApp} />;
+            return <ServiceLocationPage serviceData={serviceData} locationData={locationData} />;
         }
     }
     
-    // Type 2: Modifier + Service + Location (e.g., /best-web-designer/cape-town)
+    // Type 11: Modifier + Service + Location
     if (modifier && service && locations[location] && modifiers[modifier]) {
         const modifierData = modifiers[modifier];
         const serviceData = services[service];
         const locationData = locations[location];
-        
         if (modifierData && serviceData && locationData) {
-            return <ModifierPage modifierData={modifierData} serviceData={serviceData} locationData={locationData} openWhatsApp={openWhatsApp} />;
+            return <ModifierPage modifierData={modifierData} serviceData={serviceData} locationData={locationData} />;
         }
     }
     
-    // Type 3: Near Me (e.g., /web-designer-near-me or /web-designer-near-me/durban)
+    // Type 12: Near Me
     if (type === 'near-me' && service) {
         const serviceData = services[service];
         const locationData = location ? locations[location] : null;
-        
         if (serviceData) {
-            return <NearMePage serviceData={serviceData} locationData={locationData} openWhatsApp={openWhatsApp} />;
+            return <NearMePage serviceData={serviceData} locationData={locationData} />;
         }
     }
     
-    // Type 4: Industry + Location (e.g., /web-design-plumbers/durban)
+    // Type 13: Industry + Location
     if (industry && locations[location] && industries[industry]) {
         const industryData = industries[industry];
         const locationData = locations[location];
-        
         if (industryData && locationData) {
-            return <IndustryPage industryData={industryData} locationData={locationData} openWhatsApp={openWhatsApp} />;
+            return <IndustryPage industryData={industryData} locationData={locationData} />;
         }
-    }
-    
-    // Type 5: Question Pages (e.g., /how-much-does-a-website-cost)
-    if (question && questions[question]) {
-        const questionData = questions[question];
-        return <QuestionPage questionData={questionData} openWhatsApp={openWhatsApp} />;
-    }
-    
-    // Type 6: Price Pages (e.g., /web-design-prices-south-africa)
-    if (pricePages[type]) {
-        const priceData = pricePages[type];
-        return <PricePage priceData={priceData} openWhatsApp={openWhatsApp} />;
     }
     
     // Fallback: 404
     return <NotFoundPage />;
 };
 
+// ===== COMPONENT: VS Comparison Page =====
+const VSComparisonPage = ({ data }) => {
+    useEffect(() => {
+        document.title = `${data.title} | Inkspire Digital`;
+    }, [data]);
+
+    return (
+        <>
+            <Header />
+            <section className="hero" style={{ padding: '80px 0' }}>
+                <div className="container">
+                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <h1>{data.title}</h1>
+                        <p>{data.item1} vs {data.item2} - Which is right for your business?</p>
+                        <button className="btn btn-primary" onClick={openWhatsApp}>Get Expert Advice</button>
+                    </div>
+                </div>
+            </section>
+            <section style={{ padding: '40px 0' }}>
+                <div className="container">
+                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <p>{data.content}</p>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', marginTop: '40px' }}>
+                            <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '12px' }}>
+                                <h3>{data.item1}</h3>
+                                <p>Pros and cons of choosing {data.item1.toLowerCase()} for your project.</p>
+                            </div>
+                            <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '12px' }}>
+                                <h3>{data.item2}</h3>
+                                <p>Pros and cons of choosing {data.item2.toLowerCase()} for your project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <PricingSection />
+            <Footer />
+            <FloatingWhatsApp />
+        </>
+    );
+};
+
+// ===== COMPONENT: "For" Page =====
+const ForPage = ({ data }) => {
+    useEffect(() => {
+        document.title = `Web Design for ${data.audience} - ${data.description} | Inkspire Digital`;
+    }, [data]);
+
+    return (
+        <>
+            <Header />
+            <section className="hero" style={{ padding: '80px 0' }}>
+                <div className="container">
+                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <h1>Web Design for {data.audience}</h1>
+                        <p>Professional websites {data.description}. Starting from R1,499.</p>
+                        <button className="btn btn-primary" onClick={openWhatsApp}>Get a Quote</button>
+                    </div>
+                </div>
+            </section>
+            <PricingSection />
+            <Footer />
+            <FloatingWhatsApp />
+        </>
+    );
+};
+
+// ===== COMPONENT: "Without" Page =====
+const WithoutPage = ({ data }) => {
+    useEffect(() => {
+        document.title = `Website Without ${data.task} - ${data.solution} | Inkspire Digital`;
+    }, [data]);
+
+    return (
+        <>
+            <Header />
+            <section className="hero" style={{ padding: '80px 0' }}>
+                <div className="container">
+                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <h1>Website Without {data.task}</h1>
+                        <p>{data.solution}. Get a professional website hassle-free.</p>
+                        <button className="btn btn-primary" onClick={openWhatsApp}>Learn How</button>
+                    </div>
+                </div>
+            </section>
+            <PricingSection />
+            <Footer />
+            <FloatingWhatsApp />
+        </>
+    );
+};
+
+// ===== COMPONENT: Year Page =====
+const YearPage = ({ data }) => {
+    useEffect(() => {
+        document.title = `Web Design Prices ${data.year} - ${data.description} | Inkspire Digital`;
+    }, [data]);
+
+    return (
+        <>
+            <Header />
+            <section className="hero" style={{ padding: '80px 0' }}>
+                <div className="container">
+                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <h1>Web Design Prices {data.year}</h1>
+                        <p>Updated {data.description}. Transparent pricing from R1,499.</p>
+                        <button className="btn btn-primary" onClick={openWhatsApp}>Get 2025 Pricing</button>
+                    </div>
+                </div>
+            </section>
+            <PricingSection />
+            <Footer />
+            <FloatingWhatsApp />
+        </>
+    );
+};
+
+// ===== COMPONENT: Price Range Page =====
+const PriceRangePage = ({ data }) => {
+    useEffect(() => {
+        document.title = `Website Under ${data.amount} - ${data.packages} | Inkspire Digital`;
+    }, [data]);
+
+    return (
+        <>
+            <Header />
+            <section className="hero" style={{ padding: '80px 0' }}>
+                <div className="container">
+                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <h1>Website Under {data.amount}</h1>
+                        <p>{data.packages}. Quality websites at affordable prices.</p>
+                        <button className="btn btn-primary" onClick={openWhatsApp}>View Packages</button>
+                    </div>
+                </div>
+            </section>
+            <PricingSection />
+            <Footer />
+            <FloatingWhatsApp />
+        </>
+    );
+};
+
+// ===== COMPONENT: Landmark Page =====
+const LandmarkPage = ({ data }) => {
+    useEffect(() => {
+        document.title = `Web Designer Near ${data.name} - Serving ${data.city} | Inkspire Digital`;
+    }, [data]);
+
+    return (
+        <>
+            <Header />
+            <section className="hero" style={{ padding: '80px 0' }}>
+                <div className="container">
+                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <h1>Web Designer Near {data.name}</h1>
+                        <p>Serving businesses near {data.name} in {data.city}. Local service with remote convenience.</p>
+                        <button className="btn btn-primary" onClick={openWhatsApp}>Get Local Quote</button>
+                    </div>
+                </div>
+            </section>
+            <PricingSection />
+            <Footer />
+            <FloatingWhatsApp />
+        </>
+    );
+};
+
+// ===== COMPONENT: Urgency Page =====
+const UrgencyPage = ({ data }) => {
+    useEffect(() => {
+        document.title = `${data.type} Web Design - ${data.turnaround} Turnaround | Inkspire Digital`;
+    }, [data]);
+
+    return (
+        <>
+            <Header />
+            <section className="hero" style={{ padding: '80px 0' }}>
+                <div className="container">
+                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <div className="popular-tag" style={{ position: 'relative', top: '0', marginBottom: '20px' }}>{data.badge}</div>
+                        <h1>{data.type} Web Design</h1>
+                        <p>Need a website fast? {data.turnaround} turnaround available. Get online quickly.</p>
+                        <button className="btn btn-primary" onClick={openWhatsApp}>Request Rush Service</button>
+                    </div>
+                </div>
+            </section>
+            <PricingSection />
+            <Footer />
+            <FloatingWhatsApp />
+        </>
+    );
+};
+
+// ===== COMPONENT: Review Page =====
+const ReviewPage = ({ data }) => {
+    useEffect(() => {
+        document.title = `${data.type} - What Clients Say About Inkspire Digital | Reviews`;
+    }, [data]);
+
+    return (
+        <>
+            <Header />
+            <section className="hero" style={{ padding: '80px 0' }}>
+                <div className="container">
+                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <h1>Client {data.type}</h1>
+                        <p>★★★★★ 4.9 out of 5 - Based on 12+ reviews</p>
+                        <button className="btn btn-primary" onClick={openWhatsApp}>Become a Happy Client</button>
+                    </div>
+                </div>
+            </section>
+            <section style={{ padding: '40px 0' }}>
+                <div className="container">
+                    <div className="testimonials-grid">
+                        <div className="testimonial-card">
+                            <i className="fas fa-quote-left"></i>
+                            <p>"Inkspire transformed our online presence. The website brought us new customers nationwide!"</p>
+                            <h4>John Dlamini</h4>
+                            <p>Dlamini Enterprises</p>
+                        </div>
+                        <div className="testimonial-card">
+                            <i className="fas fa-quote-left"></i>
+                            <p>"Professional, creative, and delivered exactly what I wanted. Best web designer in SA!"</p>
+                            <h4>Sarah van der Merwe</h4>
+                            <p>Cape Coffee Co.</p>
+                        </div>
+                        <div className="testimonial-card">
+                            <i className="fas fa-quote-left"></i>
+                            <p>"The referral program is great! I earned commission while my friend got a stunning website."</p>
+                            <h4>Michael Omondi</h4>
+                            <p>Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <Footer />
+            <FloatingWhatsApp />
+        </>
+    );
+};
+
+// ===== COMPONENT: Question Page =====
+const QuestionPage = ({ data }) => {
+    useEffect(() => {
+        document.title = `${data.title} | Inkspire Digital`;
+    }, [data]);
+
+    return (
+        <>
+            <Header />
+            <section className="hero" style={{ padding: '80px 0' }}>
+                <div className="container">
+                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                        <h1>{data.title}</h1>
+                        <p>{data.answer}</p>
+                        <button className="btn btn-primary" onClick={openWhatsApp}>Get Free Quote</button>
+                    </div>
+                </div>
+            </section>
+            <section style={{ padding: '40px 0' }}>
+                <div className="container">
+                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <p>{data.longAnswer}</p>
+                    </div>
+                </div>
+            </section>
+            <PricingSection />
+            <Footer />
+            <FloatingWhatsApp />
+        </>
+    );
+};
+
 // ===== COMPONENT: Service + Location Page =====
-const ServiceLocationPage = ({ serviceData, locationData, openWhatsApp }) => {
+const ServiceLocationPage = ({ serviceData, locationData }) => {
     useEffect(() => {
         document.title = `${serviceData.name} in ${locationData.name} - From R1,499 | Inkspire Digital`;
     }, [serviceData, locationData]);
@@ -270,15 +553,15 @@ const ServiceLocationPage = ({ serviceData, locationData, openWhatsApp }) => {
                     </div>
                 </div>
             </section>
-            <PricingSection openWhatsApp={openWhatsApp} />
+            <PricingSection />
             <Footer />
             <FloatingWhatsApp />
         </>
     );
 };
 
-// ===== COMPONENT: Modifier Page (Best/Top/Cheap) =====
-const ModifierPage = ({ modifierData, serviceData, locationData, openWhatsApp }) => {
+// ===== COMPONENT: Modifier Page =====
+const ModifierPage = ({ modifierData, serviceData, locationData }) => {
     useEffect(() => {
         document.title = `${modifierData.title} ${serviceData.name} in ${locationData.name} - ${modifierData.description} | Inkspire Digital`;
     }, [modifierData, serviceData, locationData]);
@@ -290,12 +573,12 @@ const ModifierPage = ({ modifierData, serviceData, locationData, openWhatsApp })
                 <div className="container">
                     <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
                         <h1>{modifierData.title} {serviceData.name} in {locationData.name}</h1>
-                        <p>Looking for the {modifierData.keyword} {serviceData.keyword} in {locationData.name}? I'm a {modifierData.description} professional serving {locationData.name} and surrounding areas.</p>
+                        <p>Looking for the {modifierData.keyword} {serviceData.keyword} in {locationData.name}? I'm a {modifierData.description} professional serving {locationData.name}.</p>
                         <button className="btn btn-primary" onClick={openWhatsApp}>Get Free Quote</button>
                     </div>
                 </div>
             </section>
-            <PricingSection openWhatsApp={openWhatsApp} />
+            <PricingSection />
             <Footer />
             <FloatingWhatsApp />
         </>
@@ -303,7 +586,7 @@ const ModifierPage = ({ modifierData, serviceData, locationData, openWhatsApp })
 };
 
 // ===== COMPONENT: Near Me Page =====
-const NearMePage = ({ serviceData, locationData, openWhatsApp }) => {
+const NearMePage = ({ serviceData, locationData }) => {
     const locationText = locationData ? `near ${locationData.name}` : 'near me';
     
     useEffect(() => {
@@ -317,12 +600,12 @@ const NearMePage = ({ serviceData, locationData, openWhatsApp }) => {
                 <div className="container">
                     <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
                         <h1>{serviceData.name} {locationText}</h1>
-                        <p>Looking for a {serviceData.keyword} close to you? I serve {locationData ? locationData.name : 'all areas of South Africa'} with fast response times and affordable rates.</p>
+                        <p>Looking for a {serviceData.keyword} close to you? I serve {locationData ? locationData.name : 'all areas of South Africa'} with fast response times.</p>
                         <button className="btn btn-primary" onClick={openWhatsApp}>Get Free Quote</button>
                     </div>
                 </div>
             </section>
-            <PricingSection openWhatsApp={openWhatsApp} />
+            <PricingSection />
             <Footer />
             <FloatingWhatsApp />
         </>
@@ -330,7 +613,7 @@ const NearMePage = ({ serviceData, locationData, openWhatsApp }) => {
 };
 
 // ===== COMPONENT: Industry Page =====
-const IndustryPage = ({ industryData, locationData, openWhatsApp }) => {
+const IndustryPage = ({ industryData, locationData }) => {
     useEffect(() => {
         document.title = `Web Design for ${industryData.name} in ${locationData.name} - ${industryData.service} | Inkspire Digital`;
     }, [industryData, locationData]);
@@ -342,77 +625,40 @@ const IndustryPage = ({ industryData, locationData, openWhatsApp }) => {
                 <div className="container">
                     <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
                         <h1>Web Design for {industryData.name} in {locationData.name}</h1>
-                        <p>Specialized {industryData.service} solutions for {industryData.keyword}s in {locationData.name}. Get more customers with a professional online presence.</p>
+                        <p>Specialized {industryData.service} solutions for {industryData.keyword}s in {locationData.name}.</p>
                         <button className="btn btn-primary" onClick={openWhatsApp}>Get Free Quote</button>
                     </div>
                 </div>
             </section>
-            <PricingSection openWhatsApp={openWhatsApp} />
+            <PricingSection />
             <Footer />
             <FloatingWhatsApp />
         </>
     );
 };
 
-// ===== COMPONENT: Question Page =====
-const QuestionPage = ({ questionData, openWhatsApp }) => {
-    useEffect(() => {
-        document.title = `${questionData.title} | Inkspire Digital`;
-    }, [questionData]);
-
+// ===== COMPONENT: Not Found =====
+const NotFoundPage = () => {
     return (
         <>
             <Header />
-            <section className="hero" style={{ padding: '80px 0' }}>
-                <div className="container">
-                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-                        <h1>{questionData.title}</h1>
-                        <p>{questionData.answer}</p>
-                        <button className="btn btn-primary" onClick={openWhatsApp}>Get Free Quote</button>
-                    </div>
-                </div>
-            </section>
-            <section style={{ padding: '40px 0' }}>
-                <div className="container">
-                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <p>{questionData.longAnswer}</p>
-                    </div>
-                </div>
-            </section>
-            <PricingSection openWhatsApp={openWhatsApp} />
+            <div style={{ textAlign: 'center', padding: '100px 20px' }}>
+                <h1>Page Not Found</h1>
+                <p>The page you're looking for doesn't exist.</p>
+                <a href="/" className="btn btn-primary">Go Home</a>
+            </div>
             <Footer />
             <FloatingWhatsApp />
         </>
     );
 };
 
-// ===== COMPONENT: Price Page =====
-const PricePage = ({ priceData, openWhatsApp }) => {
-    useEffect(() => {
-        document.title = `${priceData.title} | Inkspire Digital`;
-    }, [priceData]);
+// ===== PRICING SECTION =====
+const PricingSection = () => {
+    const openWhatsApp = () => {
+        window.open('https://wa.me/27761050485?text=Hi%20Inkspire%20Digital%20Designs!%20I%20need%20a%20website.%20Can%20you%20help%3F', '_blank');
+    };
 
-    return (
-        <>
-            <Header />
-            <section className="hero" style={{ padding: '80px 0' }}>
-                <div className="container">
-                    <div className="hero-content" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-                        <h1>{priceData.title}</h1>
-                        <p>{priceData.description}</p>
-                        <button className="btn btn-primary" onClick={openWhatsApp}>Get Free Quote</button>
-                    </div>
-                </div>
-            </section>
-            <PricingSection openWhatsApp={openWhatsApp} showComparison={priceData.showComparison} />
-            <Footer />
-            <FloatingWhatsApp />
-        </>
-    );
-};
-
-// ===== PRICING SECTION (Reusable) =====
-const PricingSection = ({ openWhatsApp, showComparison }) => {
     return (
         <section style={{ padding: '60px 0' }}>
             <div className="container">
@@ -460,23 +706,7 @@ const PricingSection = ({ openWhatsApp, showComparison }) => {
     );
 };
 
-// ===== 404 Page =====
-const NotFoundPage = () => {
-    return (
-        <>
-            <Header />
-            <div style={{ textAlign: 'center', padding: '100px 20px' }}>
-                <h1>Page Not Found</h1>
-                <p>The page you're looking for doesn't exist.</p>
-                <a href="/" className="btn btn-primary">Go Home</a>
-            </div>
-            <Footer />
-            <FloatingWhatsApp />
-        </>
-    );
-};
-
-// ===== Helper Functions =====
+// ===== OPEN WHATSAPP =====
 const openWhatsApp = () => {
     window.open('https://wa.me/27761050485?text=Hi%20Inkspire%20Digital%20Designs!%20I%20need%20a%20website.%20Can%20you%20help%3F', '_blank');
 };
