@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { useState, useEffect } from 'react';
-import { Analytics } from '@vercel/analytics/react';  // ← ADD THIS
+import { Analytics } from '@vercel/analytics/react';
 import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
 import Login from './components/dashboard/Login';
@@ -10,9 +10,8 @@ import JohannesburgPage from './pages/locations/JohannesburgPage';
 import DurbanPage from './pages/locations/DurbanPage';
 import PretoriaPage from './pages/locations/PretoriaPage';
 import BlogPost from './pages/blog/BlogPost';
-import './styles/globals.css';
-import DynamicServicePage from './pages/DynamicServicePage';
 import SEOPage from './pages/SEOPage';
+import './styles/globals.css';
 
 function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -27,12 +26,10 @@ function App() {
     return (
         <Router>
             <Toaster position="top-right" />
-            <Analytics />  {/* ← ADD THIS LINE */}
+            <Analytics />
             <Routes>
-                <Route path="/:type?/:service?/:location?/:modifier?/:industry?/:question?/:year?/:price?/:landmark?/:urgency?" element={<SEOPage />} />
-                <Route path="/:type?/:service?/:location?/:modifier?/:industry?/:question?" element={<SEOPage />} />
+                {/* EXACT MATCHES FIRST - These take priority */}
                 <Route path="/" element={<HomePage />} />
-                <Route path="/:service/:location" element={<DynamicServicePage />} />
                 <Route path="/cape-town-web-design" element={<CapeTownPage />} />
                 <Route path="/johannesburg-web-design" element={<JohannesburgPage />} />
                 <Route path="/pretoria-web-design" element={<PretoriaPage />} />
@@ -48,6 +45,9 @@ function App() {
                     <DashboardPage setIsAuthenticated={setIsAuthenticated} /> : 
                     <Navigate to="/admin" />
                 } />
+                
+                {/* SEO PAGE - CATCH ALL (must be LAST) */}
+                <Route path="/:type?/:service?/:location?/:modifier?/:industry?/:question?/:year?/:price?/:landmark?/:urgency?" element={<SEOPage />} />
             </Routes>
         </Router>
     );
