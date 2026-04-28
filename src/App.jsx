@@ -12,6 +12,7 @@ import PretoriaPage from './pages/locations/PretoriaPage';
 import BlogPost from './pages/blog/BlogPost';
 import './styles/globals.css';
 import DynamicServicePage from './pages/DynamicServicePage';
+import SEOPage from './pages/SEOPage';
 
 function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -28,6 +29,7 @@ function App() {
             <Toaster position="top-right" />
             <Analytics />  {/* ← ADD THIS LINE */}
             <Routes>
+                <Route path="/:type?/:service?/:location?/:modifier?/:industry?/:question?" element={<SEOPage />} />
                 <Route path="/" element={<HomePage />} />
                 <Route path="/:service/:location" element={<DynamicServicePage />} />
                 <Route path="/cape-town-web-design" element={<CapeTownPage />} />
