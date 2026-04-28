@@ -1,24 +1,61 @@
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-// Your Google Apps Script Web App URL
-const API_URL = 'https://script.google.com/macros/s/AKfycbxR9NKd0j8SCPpeVR8lhgVfg4KpftutTofr74GmoPkJLaoQp9ePd5JsqHe4FKZxhWmLAQ/exec';
+// Your Google Apps Script URL
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxR9NKd0j8SCPpeVR8lhgVfg4KpftutTofr74GmoPkJLaoQp9ePd5JsqHe4FKZxhWmLAQ/exec';
 
-// Helper function for API calls
+// Use CORS proxy to fix the error
+const PROXY = 'https://api.allorigins.win/raw?url=';
+const API_URL = `${PROXY}${encodeURIComponent(SCRIPT_URL)}`;
+
 const apiCall = async (params) => {
     try {
         const response = await axios.get(API_URL, { params });
+        // Proxy wraps response as string, so parse it
+        if (typeof response.data === 'string') {
+            return JSON.parse(response.data);
+        }
         return response.data;
     } catch (error) {
         console.error('API Error:', error);
-        toast.error('Failed to connect to server');
         return { success: false, error: error.message };
     }
 };
 
-// ===== REFERRALS (Leads) =====
+// ===== REFERRALS =====
 export const getReferrals = async () => {
     return await apiCall({ action: 'get' });
+};
+
+export const getStats = async () => {
+    return await apiCall({ action: 'stats' });
+};
+
+// ===== LINKS =====
+export const getLinks = async () => {
+    return await apiCall({ action: 'getLinks' });
+};
+
+export const addLink = async (referrerName, link) => {
+    return await apiCall({
+        action: 'addLink',
+        referrerName: referrerName,
+        link: link
+    });
+};
+
+export const trackClick = async (referrerName) => {
+    return await apiCall({
+        action: 'trackClick',
+        referrerName: referrerName
+    });
+};
+
+export const trackLead = async (referrerName) => {
+    return await apiCall({
+        action: 'trackLead',
+        referrerName: referrerName
+    });
 };
 
 export const addReferral = async (data) => {
@@ -44,36 +81,5 @@ export const deleteReferral = async (id) => {
     return await apiCall({
         action: 'delete',
         id: id
-    });
-};
-
-export const getStats = async () => {
-    return await apiCall({ action: 'stats' });
-};
-
-// ===== REFERRAL LINKS (NEW) =====
-export const getLinks = async () => {
-    return await apiCall({ action: 'getLinks' });
-};
-
-export const addLink = async (referrerName, link) => {
-    return await apiCall({
-        action: 'addLink',
-        referrerName: referrerName,
-        link: link
-    });
-};
-
-export const trackClick = async (referrerName) => {
-    return await apiCall({
-        action: 'trackClick',
-        referrerName: referrerName
-    });
-};
-
-export const trackLead = async (referrerName) => {
-    return await apiCall({
-        action: 'trackLead',
-        referrerName: referrerName
     });
 };
