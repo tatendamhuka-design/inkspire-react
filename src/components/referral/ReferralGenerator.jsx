@@ -1,31 +1,41 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import { useLinks } from '../../hooks/useLinks';
 
 const ReferralGenerator = () => {
     const [name, setName] = useState('');
     const [generated, setGenerated] = useState(false);
     const [link, setLink] = useState('');
+    const { generateNewLink } = useLinks();
 
-    const generateLink = () => {
+    const generateLink = async () => {
         if (!name.trim()) {
             toast.error('Please enter your name');
             return;
         }
 
-        const encodedName = encodeURIComponent(name);
-        const newLink = `${window.location.origin}/?ref=${encodedName}`;
-        setLink(newLink);
-        setGenerated(true);
-
-        // Save to localStorage
-        const saved = localStorage.getItem('inkspire_referral_links') || '[]';
-        const links = JSON.parse(saved);
-        if (!links.find(l => l.name === name)) {
-            links.push({ name, link: newLink, date: new Date().toISOString(), clicks: 0, leads: 0 });
-            localStorage.setItem('inkspire_referral_links', JSON.stringify(links));
-        }
+        // Save to Google Sheets via the hook
+        const newLink = await generateNewLink(name);
         
-        toast.success('Link generated!');
+        if (newLink) {
+            setLink(newLink);
+            setGenerated(true);
+            toast.success('Link generated and saved to dashboard!');
+        } else {
+            // Fallback to old method if API fails
+            const encodedName = encodeURIComponent(name);
+            const fallbackLink = window.location.origin + window.location.pathname + `?ref=${encodedName}`;
+            setLink(fallbackLink);
+            setGenerated(true);
+            
+            // Save to localStorage as backup
+            let links = JSON.parse(localStorage.getItem('inkspire_referral_links') || '[]');
+            if (!links.find(l => l.name === name)) {
+                links.push({ name: name, link: fallbackLink, date: new Date().toISOString(), clicks: 0, leads: 0 });
+                localStorage.setItem('inkspire_referral_links', JSON.stringify(links));
+            }
+            toast.success('Link saved locally!');
+        }
     };
 
     const copyLink = () => {
@@ -54,7 +64,14 @@ const ReferralGenerator = () => {
                                 placeholder="Enter your name" 
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                style={{ width: '100%', padding: '14px', borderRadius: '50px', border: 'none', marginBottom: '15px' }}
+                                style={{ 
+                                    width: '100%', 
+                                    padding: '14px', 
+                                    borderRadius: '50px', 
+                                    border: 'none', 
+                                    marginBottom: '15px',
+                                    textAlign: 'center'
+                                }}
                             />
                             <button className="btn btn-primary" onClick={generateLink} style={{ width: '100%' }}>
                                 <i className="fas fa-link"></i> Get Your Link
@@ -62,14 +79,34 @@ const ReferralGenerator = () => {
                         </div>
                     ) : (
                         <div>
-                            <div style={{ background: 'rgba(255,255,255,0.15)', padding: '15px', borderRadius: '12px', marginBottom: '20px', wordBreak: 'break-all' }}>
+                            <div style={{ 
+                                background: 'rgba(255,255,255,0.15)', 
+                                padding: '15px', 
+                                borderRadius: '12px', 
+                                marginBottom: '20px', 
+                                wordBreak: 'break-all' 
+                            }}>
                                 <p style={{ color: 'white', marginBottom: '5px' }}>Your referral link:</p>
                                 <code style={{ color: 'white', fontSize: '0.85rem' }}>{link}</code>
                             </div>
                             <div className="referral-buttons">
-                                <button className="btn btn-primary" onClick={copyLink}><i className="fas fa-copy"></i> Copy Link</button>
-                                <button className="btn btn-whatsapp" onClick={shareWhatsApp}><i className="fab fa-whatsapp"></i> Share via WhatsApp</button>
+                                <button className="btn btn-primary" onClick={copyLink}>
+                                    <i className="fas fa-copy"></i> Copy Link
+                                </button>
+                                <button className="btn btn-whatsapp" onClick={shareWhatsApp}>
+                                    <i className="fab fa-whatsapp"></i> Share via WhatsApp
+                                </button>
                             </div>
+                            <button 
+                                className="btn btn-secondary" 
+                                onClick={() => {
+                                    setGenerated(false);
+                                    setName('');
+                                }}
+                                style={{ marginTop: '15px' }}
+                            >
+                                Generate Another Link
+                            </button>
                         </div>
                     )}
                     

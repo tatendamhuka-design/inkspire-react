@@ -1,8 +1,8 @@
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-// Your Google Apps Script URL
-const API_URL = 'https://script.google.com/macros/s/AKfycbzQ8DDLMicHSLI44SPZdAl_bTotyjaQGk0AhVa0aDSSMaBoF7wEs1-JkxlubDvkFiMrXw/exec';
+// Your Google Apps Script Web App URL
+const API_URL = 'https://script.google.com/macros/s/AKfycbyh8zQOeCqRZ6jkRq5VZrf6nEmfhdC-6OV_O_vYMVX2pS_uOLwRbnWAw6qaASrMc5VCPw/exec';
 
 // Helper function for API calls
 const apiCall = async (params) => {
@@ -16,20 +16,14 @@ const apiCall = async (params) => {
     }
 };
 
-// Get all referrals
+// ===== REFERRALS (Leads) =====
 export const getReferrals = async () => {
-    return await apiCall({ action: 'getReferrals' });
+    return await apiCall({ action: 'get' });
 };
 
-// Get all generated links
-export const getLinks = async () => {
-    return await apiCall({ action: 'getLinks' });
-};
-
-// Add a new referral
 export const addReferral = async (data) => {
     return await apiCall({
-        action: 'addReferral',
+        action: 'add',
         referrerName: data.referrerName,
         leadName: data.leadName,
         businessName: data.businessName,
@@ -38,38 +32,38 @@ export const addReferral = async (data) => {
     });
 };
 
-// Update referral status
 export const updateReferralStatus = async (id, status) => {
     return await apiCall({
-        action: 'updateReferralStatus',
+        action: 'update',
         id: id,
         status: status
     });
 };
 
-// Delete referral
 export const deleteReferral = async (id) => {
     return await apiCall({
-        action: 'deleteReferral',
+        action: 'delete',
         id: id
     });
 };
 
-// Get statistics
 export const getStats = async () => {
-    return await apiCall({ action: 'getStats' });
+    return await apiCall({ action: 'stats' });
 };
 
-// Generate a new referral link
-export const generateLink = async (referrerName, referrerWhatsapp) => {
+// ===== REFERRAL LINKS (NEW) =====
+export const getLinks = async () => {
+    return await apiCall({ action: 'getLinks' });
+};
+
+export const addLink = async (referrerName, link) => {
     return await apiCall({
-        action: 'generateLink',
+        action: 'addLink',
         referrerName: referrerName,
-        referrerWhatsapp: referrerWhatsapp
+        link: link
     });
 };
 
-// Track link click
 export const trackClick = async (referrerName) => {
     return await apiCall({
         action: 'trackClick',
@@ -77,7 +71,9 @@ export const trackClick = async (referrerName) => {
     });
 };
 
-// Get link statistics
-export const getLinkStats = async () => {
-    return await apiCall({ action: 'getLinkStats' });
+export const trackLead = async (referrerName) => {
+    return await apiCall({
+        action: 'trackLead',
+        referrerName: referrerName
+    });
 };

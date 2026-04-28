@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import DashboardLayout from '../components/dashboard/DashboardLayout';
 import StatsCards from '../components/dashboard/StatsCards';
 import LinksTable from '../components/dashboard/LinksTable';
@@ -10,13 +10,13 @@ import { useLinks } from '../hooks/useLinks';
 
 const DashboardPage = ({ setIsAuthenticated }) => {
     const [showAddModal, setShowAddModal] = useState(false);
-    const { referrals, loading: referralsLoading, addNewReferral, updateStatus, removeReferral, refresh: refreshReferrals } = useReferrals();
-    const { links, loading: linksLoading, refresh: refreshLinks } = useLinks();
+    const { referrals, stats, loading: referralsLoading, addNewReferral, updateStatus, removeReferral, refresh: refreshReferrals } = useReferrals();
+    const { links, linkStats, loading: linksLoading, refresh: refreshLinks } = useLinks();
 
-    useEffect(() => {
-        refreshReferrals();
-        refreshLinks();
-    }, []);
+    const allStats = {
+        ...stats,
+        ...linkStats
+    };
 
     return (
         <DashboardLayout setIsAuthenticated={setIsAuthenticated}>
