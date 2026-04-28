@@ -11,6 +11,7 @@ import DurbanPage from './pages/locations/DurbanPage';
 import PretoriaPage from './pages/locations/PretoriaPage';
 import BlogPost from './pages/blog/BlogPost';
 import './styles/globals.css';
+import DynamicServicePage from './pages/DynamicServicePage';
 
 function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -28,6 +29,7 @@ function App() {
             <Analytics />  {/* ← ADD THIS LINE */}
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/:service/:location" element={<DynamicServicePage />} />
                 <Route path="/cape-town-web-design" element={<CapeTownPage />} />
                 <Route path="/johannesburg-web-design" element={<JohannesburgPage />} />
                 <Route path="/pretoria-web-design" element={<PretoriaPage />} />
