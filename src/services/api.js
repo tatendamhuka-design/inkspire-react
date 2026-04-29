@@ -2,7 +2,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 // Your Google Apps Script URL
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxR9NKd0j8SCPpeVR8lhgVfg4KpftutTofr74GmoPkJLaoQp9ePd5JsqHe4FKZxhWmLAQ/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbznbAav7mG3scZ4RA8LO5iOKymNtAgwwQ7koidwZLt1/devhttps://script.google.com/macros/s/AKfycbyrv6dsj4DXucD3O4PbiemCMZP6OzCrJLxCSleSQUQJF9VteGGXM4tn9wQxCRCAReVl6g/exec';
 
 // Use CORS proxy to fix the error
 const PROXY = 'https://api.allorigins.win/raw?url=';
