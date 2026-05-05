@@ -12,22 +12,30 @@ const Hero = () => {
         <section className="hero" id="home">
             <div className="container">
                 <div className="hero-content">
-                    <h1>I Build Websites That Bring Clients</h1>
-                    <p>Web Design | Notion Systems | Graphic Design</p>
+                    {/* H1 - Centered, clean, SEO optimized */}
+                    <h1>Web Design from R1,499 </h1>
+                    <h1 style={{ fontSize: '1.8rem', marginTop: '-10px' }}>Cape Town • Johannesburg • Durban • Pretoria</h1>
+                    
+                    {/* Subtitle - Clean and scannable */}
+                    <p>Professional Web Design | Hosting R149/month (first 3 months free) | Graphic Design from R350</p>
+                    
                     <div className="hero-tagline">
-                        <span>Click. Convert. Grow.</span>
+                        <span>Helping South African small businesses</span>
                     </div>
+                    
                     <div className="hero-buttons">
                         <button className="btn btn-primary" onClick={() => scrollToSection('pricing')}>View Packages</button>
                         <button className="btn btn-orange" onClick={() => scrollToSection('portfolio')}>View My Work</button>
                         <button className="btn btn-whatsapp" onClick={openWhatsApp}>Contact Me</button>
                     </div>
+                    
                     <div className="hero-stats">
                         <div><h3>50+</h3><p>Projects</p></div>
                         <div><h3>30+</h3><p>Happy Clients</p></div>
                         <div><h3>4.9★</h3><p>Rating</p></div>
                     </div>
                 </div>
+                
                 <div className="bubbles-container">
                     <div className="bubble bubble-1">Web Design</div>
                     <div className="bubble bubble-2">Notion</div>

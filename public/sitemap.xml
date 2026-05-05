@@ -8,176 +8,65 @@
     <url><loc>https://inkspiredigitaldesigns.co.za/pretoria-web-design</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
     <url><loc>https://inkspiredigitaldesigns.co.za/durban-web-design</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
     
-    <!-- ===== SERVICE + LOCATION PAGES (93 locations × 15 services) ===== -->
-    <!-- KwaZulu-Natal Locations -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/amanzimtoti</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/durban</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/durban-north</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/umhlanga</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/ballito</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/westville</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/kloof</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/hillcrest</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/pinetown</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/queensburgh</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/bluff</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/glenwood</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/morningside</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/berea</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/musgrave</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/gateway</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/la-lucia</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/sibaya</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/mount-edgecombe</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/phoenix</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/chatsworth</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/isipingo</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/umlazi</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/kwamashu</loc><priority>0.8</priority></url>
+    <!-- ===== SERVICE PAGES ===== -->
+    <url><loc>https://inkspiredigitaldesigns.co.za/graphic-design</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-hosting</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
     
-    <!-- Gauteng Locations -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/johannesburg</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/sandton</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/midrand</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/randburg</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/fourways</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/bryanston</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/rivonia</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/sunninghill</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/woodmead</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/rosebank</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/melrose-arch</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/houghton</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/parktown</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/braamfontein</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/soweto</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/benoni</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/boksburg</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/germiston</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/kempton-park</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/edenvale</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/bedfordview</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/alberton</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/roodepoort</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/randfontein</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/krugersdorp</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/lenasia</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/pretoria</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/centurion</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/hatfield</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/brooklyn</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/menlyn</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/waterkloof</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/lynnwood</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/faerie-glen</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/garsfontein</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/moreleta-park</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/silver-lakes</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/pretoria-east</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/pretoria-north</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/wonderboom</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/soshanguve</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/mamelodi</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/atteridgeville</loc><priority>0.8</priority></url>
+    <!-- ===== KWAZULU-NATAL LOCATIONS ===== -->
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-durban</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-umhlanga</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-ballito</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-amanzimtoti</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-westville</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-hillcrest</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
     
-    <!-- Western Cape Locations -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer/cape-town</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/affordable-web-designer/cape-town</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/website-designer/cape-town</loc><priority>0.8</priority></url>
+    <!-- ===== GAUTENG LOCATIONS ===== -->
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-johannesburg</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-sandton</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-midrand</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-fourways</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-soweto</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-pretoria</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-centurion</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-menlyn</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
     
-    <!-- ===== MODIFIER PAGES (Best, Top, Cheap, Affordable) ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/best-web-designer/johannesburg</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/best-web-designer/cape-town</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/best-web-designer/durban</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/top-web-design/cape-town</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/cheap-website-designer/johannesburg</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/affordable-web-design/durban</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/professional-web-designer/pretoria</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/reliable-web-designer/sandton</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/experienced-web-designer/midrand</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/fast-web-design/umhlanga</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/quick-website-setup/ballito</loc><priority>0.7</priority></url>
+    <!-- ===== WESTERN CAPE LOCATIONS ===== -->
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-cape-town</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-camps-bay</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-sea-point</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-rondebosch</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-claremont</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
     
-    <!-- ===== NEAR ME PAGES ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer-near-me</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer-near-me/durban</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer-near-me/cape-town</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer-near-me/johannesburg</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/affordable-web-designer-near-me</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/website-designer-near-me/pretoria</loc><priority>0.8</priority></url>
-    
-    <!-- ===== INDUSTRY + LOCATION PAGES ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-plumbers/durban</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-plumbers/johannesburg</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-plumbers/cape-town</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/website-for-restaurants/cape-town</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/website-for-restaurants/durban</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/ecommerce-for-takeaways/johannesburg</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-for-lawyers/sandton</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-for-doctors/pretoria</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/websites-for-real-estate/midrand</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/websites-for-car-dealerships/johannesburg</loc><priority>0.7</priority></url>
-    
-    <!-- ===== VS COMPARISON PAGES ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-vs-web-development</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/wordpress-vs-shopify</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/wix-vs-professional-design</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/static-vs-dynamic-website</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/freelance-vs-agency</loc><priority>0.7</priority></url>
+    <!-- ===== PRICE & COMPARISON PAGES ===== -->
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-prices-south-africa</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/cheapest-website-designer</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/website-cost-breakdown</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/under-5000</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/under-3000</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/under-2000</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
     
     <!-- ===== QUESTION PAGES (Voice Search) ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/how-much-does-a-website-cost</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/how-to-choose-a-web-designer</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/do-i-need-a-website-for-my-business</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/what-is-the-best-website-builder</loc><priority>0.8</priority></url>
-    
-    <!-- ===== PRICE PAGES ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/web-design-prices-south-africa</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/website-packages-comparison</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/cheapest-website-designer</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/website-cost-breakdown</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/2025</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/2026</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/under-5000</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/under-3000</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/under-2000</loc><priority>0.7</priority></url>
-    
-    <!-- ===== "FOR" PAGES ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/small-business</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/startups</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/nonprofits</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/entrepreneurs</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/freelancers</loc><priority>0.7</priority></url>
-    
-    <!-- ===== "WITHOUT" PAGES ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/coding</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/developer</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/design-software</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/monthly-fees</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/contract</loc><priority>0.7</priority></url>
-    
-    <!-- ===== LANDMARK PAGES (Local SEO) ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/va-waterfront</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/sandton-city</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/gateway-mall</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/moses-mabhida</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/table-mountain</loc><priority>0.7</priority></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/how-much-does-a-website-cost</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/how-to-choose-a-web-designer</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/do-i-need-a-website-for-my-business</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
     
     <!-- ===== URGENCY PAGES ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/emergency</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/urgent</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/same-day</loc><priority>0.8</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/quick</loc><priority>0.8</priority></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/emergency</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/urgent</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/same-day</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
     
-    <!-- ===== REVIEW / TESTIMONIAL PAGES ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/reviews</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/testimonials</loc><priority>0.7</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/ratings</loc><priority>0.7</priority></url>
+    <!-- ===== "NEAR ME" PAGES ===== -->
+    <url><loc>https://inkspiredigitaldesigns.co.za/web-designer-near-me</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/website-designer-near-me</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+    
+    <!-- ===== REVIEW PAGES ===== -->
+    <url><loc>https://inkspiredigitaldesigns.co.za/reviews</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/testimonials</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
     
     <!-- ===== BLOG POSTS ===== -->
-    <url><loc>https://inkspiredigitaldesigns.co.za/blog/10-reasons-business-needs-website-south-africa</loc><priority>0.6</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/blog/how-to-choose-right-color-scheme-brand</loc><priority>0.6</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/blog/website-vs-social-media-why-need-both</loc><priority>0.6</priority></url>
-    <url><loc>https://inkspiredigitaldesigns.co.za/blog/how-much-does-website-cost-south-africa</loc><priority>0.6</priority></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/blog/10-reasons-business-needs-website-south-africa</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/blog/how-to-choose-right-color-scheme-brand</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/blog/website-vs-social-media-why-need-both</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+    <url><loc>https://inkspiredigitaldesigns.co.za/blog/how-much-does-website-cost-south-africa</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
     
 </urlset>

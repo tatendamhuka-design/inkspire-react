@@ -12,6 +12,7 @@ import PretoriaPage from './pages/locations/PretoriaPage';
 import BlogPost from './pages/blog/BlogPost';
 import SEOPage from './pages/SEOPage';
 import './styles/globals.css';
+import ServicesPage from './pages/ServicesPage';
 
 function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -30,6 +31,7 @@ function App() {
             <Routes>
                 {/* EXACT MATCHES FIRST - These take priority */}
                 <Route path="/" element={<HomePage />} />
+                <Route path="/services" element={<ServicesPage />} />
                 <Route path="/cape-town-web-design" element={<CapeTownPage />} />
                 <Route path="/johannesburg-web-design" element={<JohannesburgPage />} />
                 <Route path="/pretoria-web-design" element={<PretoriaPage />} />

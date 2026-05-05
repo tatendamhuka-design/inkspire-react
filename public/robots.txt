@@ -5,10 +5,15 @@ Allow: /
 # Sitemap location
 Sitemap: https://inkspiredigitaldesigns.co.za/sitemap.xml
 
-# Prevent crawling of admin pages
+# Prevent crawling of admin and dashboard pages
 Disallow: /admin/
 Disallow: /admin/dashboard
+Disallow: /dashboard/
 Disallow: /login
+Disallow: /api/
 
-# Crawl delay (be respectful)
+# Crawl delay (be respectful to server)
 Crawl-delay: 1
+
+# Block staging environments if any
+Disallow: /staging/

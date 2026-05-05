@@ -32,13 +32,16 @@ const Header = () => {
                 </Link>
                 
                 <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-                    {/* ONLY 4 MAIN NAVIGATION ITEMS */}
+                    {/* Home - stays as scroll or Link? Keeping original scroll behavior */}
                     <a onClick={() => scrollToSection('home')}>Home</a>
-                    <a onClick={() => scrollToSection('services')}>Services</a>
+                    
+                    {/* SERVICES - NOW POINTS TO DEDICATED PAGE */}
+                    <Link to="/services" onClick={() => setIsMenuOpen(false)}>Services</Link>
+                    
                     <a onClick={() => scrollToSection('pricing')}>Pricing</a>
                     <a onClick={() => scrollToSection('contact')}>Contact</a>
                     
-                    {/* MORE DROPDOWN - Everything else goes here */}
+                    {/* MORE DROPDOWN */}
                     <div className="dropdown">
                         <a className="dropbtn">More <i className="fas fa-chevron-down"></i></a>
                         <div className="dropdown-content">

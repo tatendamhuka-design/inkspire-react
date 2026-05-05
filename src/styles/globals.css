@@ -501,14 +501,14 @@ section {
 
 .hero-content p {
     color: rgba(255,255,255,0.9);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     margin-bottom: 25px;
     animation: fadeInUp 1s ease 0.2s both;
 }
 
 .hero-tagline {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 800;
     margin-bottom: 25px;
     animation: fadeInUp 1s ease 0.3s both;
 }
@@ -516,7 +516,7 @@ section {
 .hero-tagline span {
     background: rgba(255,255,255,0.15);
     padding: 8px 20px;
-    border-radius: 50px;
+    border-radius: 40px;
     display: inline-block;
     backdrop-filter: blur(5px);
 }
@@ -2593,6 +2593,33 @@ section {
 
 .footer-location-links {
     margin: 20px 0 10px;
+}
+
+/* Reset button styles to look like regular text links */
+.nav-menu button.nav-link,
+.nav-menu button.dropbtn,
+.dropdown-content button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Optional: Add hover effect if your original had one */
+.nav-menu button.nav-link:hover,
+.dropdown-content button:hover {
+    color: #6b21a5; /* or whatever your theme color is */
+}
+
+/* Keep dropdown buttons consistent with links */
+.dropdown-content button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px;
 }
 /* Schema markup for rich snippets - Add to index.html */
 /* Utility Classes */
