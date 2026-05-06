@@ -11,6 +11,8 @@
     <!-- ===== SERVICE PAGES ===== -->
     <url><loc>https://inkspiredigitaldesigns.co.za/graphic-design</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
     <url><loc>https://inkspiredigitaldesigns.co.za/web-hosting</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+    <!-- ===== NOTION SERVICES PAGE ===== -->
+    <url><loc>https://inkspiredigitaldesigns.co.za/notion-setup-services</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
     
     <!-- ===== KWAZULU-NATAL LOCATIONS ===== -->
     <url><loc>https://inkspiredigitaldesigns.co.za/web-design-durban</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>

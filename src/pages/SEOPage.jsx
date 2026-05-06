@@ -8,6 +8,16 @@ import FloatingWhatsApp from '../components/common/FloatingWhatsApp';
 const SEOPage = () => {
     const { type, service, location, modifier, industry, question, year, price, landmark, urgency } = useParams();
 
+    // ===== REDIRECT OLD /design-software URL TO NEW NOTION PAGE =====
+    useEffect(() => {
+        const currentPath = window.location.pathname;
+        const oldPaths = ['/design-software', '/without-design-software'];
+        
+        if (oldPaths.includes(currentPath)) {
+            window.location.href = '/notion-setup-services';
+        }
+    }, []);
+
     // ===== ALL SERVICES (15) =====
     const services = {
         'web-designer': { name: 'Web Designer', keyword: 'web designer' },
@@ -96,7 +106,7 @@ const SEOPage = () => {
         'freelancers': { audience: 'Freelancers', description: 'portfolio websites that attract clients', metaDesc: 'Portfolio websites for freelancers in South Africa. Showcase your work and attract more clients with a professional online presence.' }
     };
 
-    // ===== "WITHOUT" PAGES =====
+    // ===== "WITHOUT" PAGES (design-software REMOVED - redirects to Notion page) =====
     const withoutPages = {
         'coding': { task: 'coding', solution: 'I handle all the technical work so you don\'t have to', metaDesc: 'Get a professional website without coding. No technical skills needed. I build it for you from R1,499.' },
         'developer': { task: 'a developer', solution: 'I am the developer - you get direct access without agency overhead', metaDesc: 'Get a website without hiring a developer. Direct access to a professional web designer. No agency fees.' },
@@ -181,13 +191,6 @@ const SEOPage = () => {
         'umhlanga': { name: 'Umhlanga', province: 'KwaZulu-Natal', metaDesc: 'Web design in Umhlanga from R1,499. Professional websites for businesses near Gateway Mall. Free quote.' },
         'ballito': { name: 'Ballito', province: 'KwaZulu-Natal', metaDesc: 'Web design in Ballito from R1,499. Professional websites for Dolphin Coast businesses. Free quote.' },
         'centurion': { name: 'Centurion', province: 'Gauteng', metaDesc: 'Web design in Centurion from R1,499. Professional websites for local businesses. Free quote.' }
-    };
-
-    // Add meta descriptions to objects that don't have them
-    const enhancedServiceLocation = (serviceData, locationData) => {
-        return {
-            metaDesc: `${serviceData.name} in ${locationData.name}, ${locationData.province}. Professional ${serviceData.keyword} services from R1,499. Free quote available.`
-        };
     };
 
     // ===== DETECT PAGE TYPE AND RENDER WITH HELMET =====
