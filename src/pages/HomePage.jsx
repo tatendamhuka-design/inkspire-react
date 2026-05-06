@@ -73,7 +73,7 @@ const HomePage = () => {
                   "logo": "https://inkspiredigitaldesigns.co.za/favicon.ico",
                   "image": "https://inkspiredigitaldesigns.co.za/images/hero.png",
                   "description": "Affordable web design and graphic design services for small businesses in South Africa. Websites from R1499 with free hosting included.",
-                  "priceRange": "R1499 - R15000",
+                  "priceRange": "R1499 - R9999",
                   "telephone": "+27761050485",
                   "email": "hello@inkspiredigitaldesigns.co.za",
                   "areaServed": [

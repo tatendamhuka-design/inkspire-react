@@ -100,7 +100,6 @@ const SEOPage = () => {
     const withoutPages = {
         'coding': { task: 'coding', solution: 'I handle all the technical work so you don\'t have to', metaDesc: 'Get a professional website without coding. No technical skills needed. I build it for you from R1,499.' },
         'developer': { task: 'a developer', solution: 'I am the developer - you get direct access without agency overhead', metaDesc: 'Get a website without hiring a developer. Direct access to a professional web designer. No agency fees.' },
-        'design-software': { task: 'design software', solution: 'I use professional tools, you just share your vision', metaDesc: 'No design software needed. Just share your vision and I create a professional website for your business.' },
         'monthly-fees': { task: 'monthly fees', solution: 'Affordable R149/month includes hosting, maintenance, and support - first 3 months free', metaDesc: 'Website with no hidden monthly fees. Hosting from R149/month with first 3 months free. Transparent pricing.' },
         'contract': { task: 'a long-term contract', solution: 'No lock-in contracts. Pay as you go.', metaDesc: 'No long-term contracts for web design. Pay once for your website or choose month-to-month hosting. Cancel anytime.' }
     };

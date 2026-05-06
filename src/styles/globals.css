@@ -2621,6 +2621,218 @@ section {
     text-align: left;
     padding: 8px 16px;
 }
+
+/* Move nav menu to the right */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto; /* This pushes menu to the right */
+}
+
+/* Keep burger and dark mode toggle in place */
+.burger {
+    order: 2;
+}
+
+.dark-mode-toggle {
+    order: 3;
+}
+
+/* Hosting Section - Dark Mode Compatible */
+.hosting-section {
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Light mode */
+.hosting-section {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+/* Dark mode */
+[data-theme="dark"] .hosting-section {
+    background-color: #064e3b;
+    border: 1px solid #059669;
+}
+
+.hosting-section h3 {
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.hosting-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6b35;
+    margin-bottom: 10px;
+}
+
+.hosting-price small {
+    font-size: 1rem;
+}
+
+.hosting-description {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.hosting-offer {
+    background-color: #10b981;
+    color: white;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Dark mode offer badge */
+[data-theme="dark"] .hosting-offer {
+    background-color: #059669;
+}
+
+/* Graphic Design Section - Dark Mode Compatible */
+.graphic-section {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Light mode */
+.graphic-section {
+    background-color: #f8f9fa;
+}
+
+/* Dark mode */
+[data-theme="dark"] .graphic-section {
+    background-color: #1e293b;
+}
+
+.graphic-section h3 {
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.graphic-description {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.graphic-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6b35;
+    margin-bottom: 20px;
+}
+
+/* Footer Notes - Dark Mode Compatible */
+.pricing-footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.pricing-footer p {
+    margin-bottom: 8px;
+}
+
+/* Button styles that work in dark mode */
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+/* Generic card background for dark mode */
+[data-theme="dark"] .pricing-card,
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .blog-card {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .pricing-card:hover,
+[data-theme="dark"] .service-card:hover {
+    background-color: #334155;
+}
+
+/* Push nav menu items to the right */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto; /* Pushes everything to the right */
+}
+
+/* Dark mode wrapper - positioned at the far right */
+.dark-mode-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.dark-mode-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+/* Hide the separate DarkModeToggle that was outside nav-menu */
+.nav > .dark-mode-toggle {
+    display: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--card-bg);
+        flex-direction: column;
+        padding: 40px;
+        transition: 0.3s;
+        margin-left: 0;
+        gap: 20px;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .dark-mode-wrapper {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
 /* Schema markup for rich snippets - Add to index.html */
 /* Utility Classes */
 .text-center { text-align: center; }

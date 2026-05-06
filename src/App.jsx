@@ -13,6 +13,7 @@ import BlogPost from './pages/blog/BlogPost';
 import SEOPage from './pages/SEOPage';
 import './styles/globals.css';
 import ServicesPage from './pages/ServicesPage';
+import NotionServicesPage from './pages/NotionServicesPage';
 
 function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -32,6 +33,7 @@ function App() {
                 {/* EXACT MATCHES FIRST - These take priority */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
+                <Route path="/notion-setup-services" element={<NotionServicesPage />} />
                 <Route path="/cape-town-web-design" element={<CapeTownPage />} />
                 <Route path="/johannesburg-web-design" element={<JohannesburgPage />} />
                 <Route path="/pretoria-web-design" element={<PretoriaPage />} />

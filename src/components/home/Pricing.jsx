@@ -60,31 +60,16 @@ const Pricing = () => {
                     </div>
                 </div>
 
-                {/* Hosting Section */}
-                <div style={{ 
-                    marginTop: '40px', 
-                    padding: '30px', 
-                    backgroundColor: '#f0fdf4', 
-                    borderRadius: '12px',
-                    textAlign: 'center',
-                    border: '1px solid #bbf7d0'
-                }}>
-                    <h3 style={{ marginBottom: '10px' }}>🚀 Website Hosting</h3>
-                    <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#ff6b35', marginBottom: '10px' }}>
-                        R149<span style={{ fontSize: '1rem' }}>/month</span>
+                {/* Hosting Section - Dark mode compatible */}
+                <div className="hosting-section">
+                    <h3>🚀 Website Hosting</h3>
+                    <div className="hosting-price">
+                        R149<span className="hosting-price-small">/month</span>
                     </div>
-                    <p style={{ marginBottom: '15px' }}>
+                    <p className="hosting-description">
                         Fast, secure hosting optimized for South African websites. 99.9% uptime guarantee.
                     </p>
-                    <div style={{ 
-                        backgroundColor: '#10b981', 
-                        color: 'white', 
-                        display: 'inline-block', 
-                        padding: '8px 20px', 
-                        borderRadius: '50px',
-                        fontWeight: 'bold',
-                        marginBottom: '20px'
-                    }}>
+                    <div className="hosting-offer">
                         🎁 First 3 months FREE
                     </div>
                     <div>
@@ -94,19 +79,13 @@ const Pricing = () => {
                     </div>
                 </div>
 
-                {/* Graphic Design Section */}
-                <div style={{ 
-                    marginTop: '30px', 
-                    padding: '30px', 
-                    backgroundColor: '#f8f9fa', 
-                    borderRadius: '12px',
-                    textAlign: 'center'
-                }}>
-                    <h3 style={{ marginBottom: '15px' }}>🎨 Graphic Design Services</h3>
-                    <p style={{ marginBottom: '10px' }}>
+                {/* Graphic Design Section - Dark mode compatible */}
+                <div className="graphic-section">
+                    <h3>🎨 Graphic Design Services</h3>
+                    <p className="graphic-description">
                         Logos, business cards, social media graphics, flyers, and full brand identity.
                     </p>
-                    <div style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#ff6b35', marginBottom: '20px' }}>
+                    <div className="graphic-price">
                         From R350
                     </div>
                     <button className="btn btn-primary" onClick={() => openWhatsApp('graphic')}>
@@ -114,13 +93,8 @@ const Pricing = () => {
                     </button>
                 </div>
 
-                {/* Footer Notes */}
-                <div style={{ 
-                    marginTop: '30px', 
-                    textAlign: 'center',
-                    fontSize: '0.85rem',
-                    color: '#666'
-                }}>
+                {/* Footer Notes - Dark mode compatible */}
+                <div className="pricing-footer">
                     <p>🎉 First 3 months of hosting are FREE with any package</p>
                     <p>💳 50% deposit required to start | Balance on completion</p>
                     <p>🔒 No long-term contracts | Cancel anytime</p>
