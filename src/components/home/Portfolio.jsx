@@ -118,7 +118,7 @@ const Portfolio = () => {
         : projects.filter(p => p.category === filter);
 
     return (
-        <section className="portfolio" id="portfolio">
+        <section className="portfolio" id="portfolio-main">
             <div className="container">
                 <div className="section-header">
                     <h2>Our Work</h2>

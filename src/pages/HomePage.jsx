@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import Hero from '../components/home/Hero';
+import About from '../components/home/About';        // 🆕 ADD THIS IMPORT
 import Services from '../components/home/Services';
 import Pricing from '../components/home/Pricing';
 import Portfolio from '../components/home/Portfolio';
@@ -174,6 +175,7 @@ const HomePage = () => {
             {/* COMPONENTS - All your original components preserved */}
             <Header />
             <Hero />
+            <About />               {/* 🆕 ADDED - About section between Hero and Services */}
             <Services />
             <Pricing />
             <Portfolio />
